@@ -1,12 +1,12 @@
-const axios = require('axios')
+const fetch = require('node-fetch')
 
 module.exports = async (query, options) => {
     options = options ? options : {}
     const requestOptions = options ? JSON.parse(JSON.stringify(options)) : null
     requestOptions['filter'] = undefined
-    const response = (await axios.get(
+    const response = await (await fetch(
         'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), requestOptions
-    )).data
+    )).text()
     const line = response.match(/window\["ytInitialData"]\s*=\s*(.*);+\n/)[0]
     const json = JSON.parse(line.substring(line.indexOf('{'), line.length - 2))
     const result = json

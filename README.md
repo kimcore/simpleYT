@@ -13,7 +13,7 @@ const query = 'JUSTHIS'
 simpleYT(query, {
     filter: 'video', // Filter only videos
     localAddress: '2001:470:1234:5678::a'
-    // Other parameters are passed to axios
+    // Other parameters are passed to node-fetch
 }).then(console.log)
 ```
 ## Result
