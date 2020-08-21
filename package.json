@@ -1,5 +1,22 @@
 {
   "name": "simpleyt",
+  "keywords": [
+    "youtube",
+    "youtubeapi"
+  ],
+  "author": {
+    "name": "kimcore",
+    "email": "kimcoreovo@gmail.com",
+    "url": "https://github.com/kimcore"
+  },
+  "main": "src/index.js",
+  "homepage": "https://github.com/kimcore/simpleYT",
+  "bugs": {
+    "url": "https://github.com/kimcore/simpleYT/issues",
+    "email": "kimcoreovo@gmail.com"
+  },
+  "license": "MIT",
+  "description": "Simple youtube search library without need of an api key",
   "version": "1.0.0",
   "dependencies": {
     "axios": "^0.20.0"
