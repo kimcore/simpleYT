@@ -1,8 +1,9 @@
-const fetch = require('node-fetch')
+const miniget = require('miniget')
 
 module.exports = async (query, options = {}) => {
-    const response = await (await fetch(
-        'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), options)).text()
+    const response = await miniget(
+        'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), options
+    ).text()
     const line = response.match(/window\["ytInitialData"]\s*=\s*(.*);+\n/)[0]
     const json = JSON.parse(line.substring(line.indexOf('{'), line.length - 2))
     const result = json

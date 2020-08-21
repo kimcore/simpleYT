@@ -12,8 +12,9 @@ const simpleYT = require('simpleyt')
 const query = 'JUSTHIS'
 simpleYT(query, {
     filter: 'video', // Filter only videos
-    localAddress: '2001:470:1234:5678::a'
-    // Other parameters are passed to node-fetch
+    localAddress: '2001:470:1234:5678::a',
+    family: 6
+    // Other parameters are passed to miniget
 }).then(console.log)
 ```
 ## Result
