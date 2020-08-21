@@ -9,8 +9,8 @@
 ## Usage
 ```js
 const simpleYT = require('simpleyt')
-
-simpleYT('JUSTHIS', {
+const query = 'JUSTHIS'
+simpleYT(query, {
     filter: 'video', // Filter only videos
     localAddress: '2001:470:1234:5678::a'
     // Other parameters are passed to axios
