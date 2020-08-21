@@ -1,7 +1,6 @@
 const fetch = require('node-fetch')
 
-module.exports = async (query, options) => {
-    options = options ? options : {}
+module.exports = async (query, options = {}) => {
     const requestOptions = options ? JSON.parse(JSON.stringify(options)) : null
     requestOptions['filter'] = undefined
     const response = await (await fetch(
