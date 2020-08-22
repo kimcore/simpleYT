@@ -1,6 +1,7 @@
-# simpleyt
+# simpleYT
 
-[![image](https://img.shields.io/github/license/kimcore/simpleYT?style=flat-square)](https://github.com/kimcore/simpleYT/blob/master/LICENSE)
+[![install size](https://packagephobia.com/badge?p=simpleyt)](https://packagephobia.com/result?p=simpleyt)
+[![image](https://img.shields.io/github/license/kimcore/simpleYT)](https://github.com/kimcore/simpleYT/blob/master/LICENSE)
 
 [![image](https://nodei.co/npm/simpleyt.png?downloads=true&stars=true)](https://nodei.co/npm/simpleyt/)
 
