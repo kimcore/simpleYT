@@ -38,5 +38,8 @@ simpleYT(query, {
   ...
 ]
 ```
+## Try our API
+You can try this library on our API (thanks to shilu)
+`https://ytapi.cf/search/{Query}`
 
 
