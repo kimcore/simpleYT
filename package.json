@@ -9,7 +9,6 @@
     "shilu (https://github.com/tlfn)"
   ],
   "main": "src/index.js",
-  "browser": "browser/index.js",
   "homepage": "https://github.com/kimcore/simpleYT",
   "bugs": {
     "url": "https://github.com/kimcore/simpleYT/issues",
@@ -17,7 +16,7 @@
   },
   "license": "MIT",
   "description": "Simple youtube search library without need of an api key",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependencies": {
     "miniget": "^2.0.1"
   }
