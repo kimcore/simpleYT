@@ -12,7 +12,7 @@ If you intend to use this library in a browser, use jsDelivr:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kimcore/simpleyt/browser/simpleyt.js"></script>
 ```
-Or in Node.JS:
+and then you can use `require('simpleyt')` like the example below:
 ```js
 const simpleYT = require('simpleyt')
 const query = 'JUSTHIS'

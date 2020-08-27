@@ -233,7 +233,7 @@ const miniget = require('miniget')
 
 module.exports = async (query, options = {}) => {
     const response = await miniget(
-        'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), options
+        'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), {...options, ...{filter: undefined}}
     ).text()
     const line = response.match(/window\["ytInitialData"]\s*=\s*(.*);+\n/)[0]
     const json = JSON.parse(line.substring(line.indexOf('{'), line.length - 2))
@@ -242,7 +242,9 @@ module.exports = async (query, options = {}) => {
         ['contents'][0]['itemSectionRenderer']['contents']
     return result.filter(video => {
         const type = Object.keys(video)[0].replace('Renderer', '')
-        return ['video', 'playlist'].includes(type)
+        if (options.filter === 'video') return type === 'video'
+        else if (options.filter === 'playlist') return type === 'playlist'
+        else return ['video', 'playlist'].includes(type)
     }).map(video => {
         const type = Object.keys(video)[0].replace('Renderer', '')
         const data = video[type + 'Renderer']
@@ -289,10 +291,6 @@ module.exports = async (query, options = {}) => {
             count: Number(data['videoCount']),
             thumbnails: data['thumbnails']
         }
-    }).filter(it => {
-        if (options.filter === 'video') return it.type === 'video'
-        else if (options.filter === 'playlist') return it.type === 'playlist'
-        else return true
     })
 }
 
