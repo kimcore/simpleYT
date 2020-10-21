@@ -10,7 +10,7 @@
 ## Usage
 If you intend to use this library in a browser, use jsDelivr:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/kimcore/simpleyt/browser/simpleyt.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/kimcore/simpleyt/browser/simpleyt.min.js"></script>
 ```
 and then you can use `require('simpleyt')` like the example below:
 ```js
