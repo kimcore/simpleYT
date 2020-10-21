@@ -16,7 +16,7 @@
   },
   "license": "MIT",
   "description": "Simple youtube search library without need of an api key",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "dependencies": {
     "miniget": "^2.0.1"
   }

@@ -8,14 +8,14 @@
 > Simple youtube search library without need of an api key
 
 ## Usage
-If you intend to use this library in a browser, use jsDelivr:
+If you intend to use this library on a browser, use jsDelivr:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/kimcore/simpleyt/browser/simpleyt.min.js"></script>
 ```
 and then you can use `require('simpleyt')` like the example below:
 ```js
 const simpleYT = require('simpleyt')
-const query = 'JUSTHIS'
+const query = 'very long playlist'
 simpleYT(query, {
     filter: 'video', 
     // Available filters: video, playlist
