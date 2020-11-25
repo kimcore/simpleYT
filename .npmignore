@@ -1,1 +1,5 @@
-/browser
+/node_modules
+/.idea
+/test
+package-lock.json
+.DS_Store
