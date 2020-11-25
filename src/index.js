@@ -4,8 +4,7 @@ module.exports = async (query, options = {}) => {
     const response = await miniget(
         'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), {...options, ...{filter: undefined}}
     ).text()
-    let match = response.match(/window\["ytInitialData"]\s*=\s*(.*);+\n/)
-    if (!match) match = response.match(/var\s*ytInitialData\s*=\s*(.*);\s*\n/)
+    const match = response.match(/(window\["ytInitialData"]|var ytInitialData)\s*=\s*(.*)};/)
     const line = match[0].trim()
     const json = JSON.parse(line.substring(line.indexOf('{'), line.length - 1))
     const result = json
