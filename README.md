@@ -1,5 +1,3 @@
-# THIS LIB IS OUTDATED
-## I will update this when I have time
 # simpleYT
 
 [![install size](https://packagephobia.com/badge?p=simpleyt%40latest)](https://packagephobia.com/result?p=simpleyt%40latest)

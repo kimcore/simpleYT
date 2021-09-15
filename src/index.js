@@ -2,11 +2,10 @@ const miniget = require('miniget')
 
 module.exports = async (query, options = {}) => {
     const response = await miniget(
-        'https://www.youtube.com/results?search_query=' + encodeURIComponent(query), {...options, ...{filter: undefined}}
+        `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`, options
     ).text()
-    const match = response.match(/(window\["ytInitialData"]|var ytInitialData)\s*=\s*(.*)};/)
-    const line = match[0].trim()
-    const json = JSON.parse(line.substring(line.indexOf('{'), line.length - 1))
+    const match = response.match(/(window\["ytInitialData"]|var ytInitialData)\s*=\s*(.*)};\s*<\/script>/)
+    const json = JSON.parse(match[2].trim() + "}")
     const result = json
         ['contents']['twoColumnSearchResultsRenderer']['primaryContents']['sectionListRenderer']
         ['contents'][0]['itemSectionRenderer']['contents']

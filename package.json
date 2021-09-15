@@ -6,8 +6,9 @@
   ],
   "contributors": [
     "kimcore <kimcoreovo@gmail.com> (https://github.com/kimcore)",
-    "shilu (https://github.com/tlfn)"
+    "shilu (https://github.com/en-you)"
   ],
+  "types": "index.d.ts",
   "main": "src/index.js",
   "homepage": "https://github.com/kimcore/simpleYT",
   "bugs": {
@@ -16,8 +17,8 @@
   },
   "license": "MIT",
   "description": "Simple youtube search library without need of an api key",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "dependencies": {
-    "miniget": "^2.0.1"
+    "miniget": "^4.2.1"
   }
 }
