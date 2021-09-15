@@ -25,6 +25,7 @@ export interface SearchResult {
     author: Author,
     length: Length,
     isStream: boolean,
+    count?: number,
     thumbnails: Thumbnail[]
 }
 

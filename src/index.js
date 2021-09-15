@@ -58,7 +58,7 @@ module.exports = async (query, options = {}) => {
                     ['commandMetadata']['webCommandMetadata']['url']
             },
             count: Number(data['videoCount']),
-            thumbnails: data['thumbnails']
+            thumbnails: data['thumbnails'].map(video => video.thumbnails[0])
         }
     })
 }

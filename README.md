@@ -40,7 +40,13 @@ simpleYT(query, {
       },
       length: { ms: 42888000, sec: 42888 },
       isStream: false,
-      thumbnails: [ [Object], [Object], [Object], [Object] ]
+      thumbnails: [
+          {
+              url: 'https://i.ytimg.com/vi/nPuHl_Hl2xI/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDtSUSrI3HJLkr-7mEnNfVYjVVLqQ',
+              width: 480,
+              height: 270
+          }
+      ]
     },
     ...
     {
@@ -53,13 +59,21 @@ simpleYT(query, {
         uri: 'https://www.youtube.com/channel/UC0fAfWQXyTVN-R7NP0BWwGA'
       },
       count: 1000,
-      thumbnails: [ [Object], [Object], [Object], [Object], [Object] ]
+      thumbnails: [
+          {
+              url: 'https://i.ytimg.com/vi/WhmlNt42pjk/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCG_urfC1u0JDVyJYBQd3tJ7Tb0kQ',
+              width: 168,
+              height: 94
+          },
+          {
+              url: 'https://i.ytimg.com/vi/0aG4E5jJKtQ/default.jpg',
+              width: 43,
+              height: 20
+          }
+      ]
     },
     ...
 ]
 ```
-## Try our API
-You can try this library on our API (thanks to shilu)
-`https://ytapi.cf/search/{Query}`
 
 
