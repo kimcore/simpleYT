@@ -39,4 +39,4 @@ export interface SimpleYTOptions extends Options {
  * @param query search query
  * @param options filter, request options
  */
-export default function simpleYT(query: string, options: SimpleYTOptions): SearchResult[]
+export default function simpleYT(query: string, options?: SimpleYTOptions): SearchResult[]
